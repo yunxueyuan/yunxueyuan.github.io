@@ -68,7 +68,7 @@ cls
 color 07
 title  Microsoft¼¤»î½Å±¾
 
-set Homepage=http://10086678.xyz
+set "Homepage=ht%-%tp://10086678.x%-%yz"
 set _args=
 set _elev=
 set _MASunattended=

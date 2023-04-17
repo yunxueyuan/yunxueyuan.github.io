@@ -1,7 +1,7 @@
 @setlocal DisableDelayedExpansion
 @echo off
 
-::  For command line switches, visit http://10086678.xyz/command_line_switches.html
+::  For command line switches, visit http://www.10086678.xyz/command_line_switches.html
 ::  If you want to better understand script, read from MAS separate files version. 
 
 ::============================================================================
@@ -221,7 +221,7 @@ choice /C:12345670 /N
 set _erl=%errorlevel%
 
 if %_erl%==8 exit /b
-if %_erl%==7 start http://10086678.xyz & goto :MainMenu
+if %_erl%==7 start http://www.10086678.xyz & goto :MainMenu
 if %_erl%==6 goto:Extras
 if %_erl%==5 setlocal & call :troubleshoot      & cls & endlocal & goto :MainMenu
 if %_erl%==4 setlocal & call :_Check_Status_wmi & cls & endlocal & goto :MainMenu
@@ -363,7 +363,7 @@ call :_color %Green% "$OEM$已成功创建至桌面"
 echo "%_oem%" | find /i "KMS38" 1>nul && (
 echo:
 echo 访问KMS38激活服务器Cor/Acor版本 ^(无GUI版本^)：
-echo http://10086678.xyz/oem-folder
+echo http://www.10086678.xyz/oem-folder
 )
 echo ___________________________________________________________________
 echo:
@@ -529,7 +529,7 @@ echo 评估版本不能被激活。
 echo 您需要安装完整版本的%winos%
 echo:
 echo 下载地址,
-echo http://10086678.xyz/genuine-installation-media.html
+echo http://www.10086678.xyz/genuine-installation-media.html
 goto dk_done
 )
 )
@@ -664,7 +664,7 @@ if defined notworking if defined notfoundaltactID (
 call :dk_color %Red% "为HWID查找可替换版本     [%altedition% 激活ID未找到]"
 if exist "%SystemRoot%\Servicing\Packages\Microsoft-Windows-*EvalEdition~*.mum" (
 call :dk_color %Magenta% "发现评估版本. 安装完整版的 %winos%"
-call :dk_color %Magenta% "下载地址： http://10086678.xyz/genuine-installation-media.html"
+call :dk_color %Magenta% "下载地址： http://www.10086678.xyz/genuine-installation-media.html"
 )
 )
 
@@ -673,7 +673,7 @@ if not defined key (
 echo [%winos% ^| %winbuild% ^| SKU:%osSKU%]
 echo 不支持的版本。
 echo 请确保您正在使用更新版本的脚本。
-echo http://10086678.xyz
+echo http://www.10086678.xyz
 echo:
 goto dk_done
 )
@@ -835,7 +835,7 @@ if defined resfail (
 set error=1
 echo:
 call :dk_color %Red% "检查许可证服务器              [连接失败]"
-call :dk_color2 %Magenta% "更多帮助：" %_Yellow% " http://10086678.xyz/licensing-servers-issue"
+call :dk_color2 %Magenta% "更多帮助：" %_Yellow% " http://www.10086678.xyz/licensing-servers-issue"
 )
 )
 
@@ -869,7 +869,7 @@ call :dk_color %Magenta% "目前HWID激活不支持该版本。"
 call :dk_color %Magenta% "请使用KMS38激活。"
 ) else (
 if not defined error call :dk_color %Magenta% "进入故障排除选项并运行修复许可证选项。"
-call :dk_color2 %Magenta% "更多帮助：" %_Yellow% " http://10086678.xyz/troubleshoot"
+call :dk_color2 %Magenta% "更多帮助：" %_Yellow% " http://www.10086678.xyz/troubleshoot"
 )
 )
 
@@ -1259,7 +1259,7 @@ exit /b
 ::  2nd column = Generic Retail/OEM/MAK Key
 ::  3rd column = SKU ID
 ::  4th column = Key part number
-::  5th column = Ticket signature value. It's as it is, it's not encoded. (Visit http://10086678.xyz/hwid.html#Manual_Activation to see how it's generated)
+::  5th column = Ticket signature value. It's as it is, it's not encoded. (Visit http://www.10086678.xyz/hwid.html#Manual_Activation to see how it's generated)
 ::  6th column = 1 = activation is not working (at the time of writing this), 0 = activation is working
 ::  7th column = Key Type
 ::  8th column = WMI Edition ID
@@ -1590,7 +1590,7 @@ echo 无法激活评估版本。
 echo 请安装完整版本的 %winos%
 echo:
 echo 下载地址：
-echo http://10086678.xyz/genuine-installation-media.html
+echo http://www.10086678.xyz/genuine-installation-media.html
 )
 goto dk_done
 )
@@ -1609,7 +1609,7 @@ if not exist "!_work!\clipup.exe" (
 echo Cor/Acor [No GUI] 服务器版本不存在clipup.exe。
 echo KMS38激活需要clipup.exe.
 echo 更多帮助：
-echo http://10086678.xyz/kms38.html
+echo http://www.10086678.xyz/kms38.html
 goto dk_done
 )
 )
@@ -1705,7 +1705,7 @@ if not defined key if not defined _gvlk (
 echo [%winos% ^| %winbuild% ^| SKU:%osSKU%]
 echo 不支持的版本。
 echo 请确保您正在使用更新版本的脚本。
-echo http://10086678.xyz
+echo http://www.10086678.xyz
 echo:
 goto dk_done
 )
@@ -1820,7 +1820,7 @@ if exist "%ProgramData%\Microsoft\Windows\ClipSVC\Install\Migration\*" del /f /q
 
 ::  Signature value is as it is, it's not encoded
 ::  Session ID is in Base64 encoded format. It's decoded value is "OSMajorVersion=5;OSMinorVersion=1;OSPlatformId=2;PP=0;GVLKExp=2038-01-19T03:14:07Z;DownlevelGenuineState=1;"
-::  Visit http://10086678.xyz/kms38.html#Manual_Activation to see how it's generated
+::  Visit http://www.10086678.xyz/kms38.html#Manual_Activation to see how it's generated
 
 set "signature=C52iGEoH+1VqzI6kEAqOhUyrWuEObnivzaVjyef8WqItVYd/xGDTZZ3bkxAI9hTpobPFNJyJx6a3uriXq3HVd7mlXfSUK9ydeoUdG4eqMeLwkxeb6jQWJzLOz41rFVSMtBL0e+ycCATebTaXS4uvFYaDHDdPw2lKY8ADj3MLgsA="
 set "sessionId=TwBTAE0AYQBqAG8AcgBWAGUAcgBzAGkAbwBuAD0ANQA7AE8AUwBNAGkAbgBvAHIAVgBlAHIAcwBpAG8AbgA9ADEAOwBPAFMAUABsAGEAdABmAG8AcgBtAEkAZAA9ADIAOwBQAFAAPQAwADsARwBWAEwASwBFAHgAcAA9ADIAMAAzADgALQAwADEALQAxADkAVAAwADMAOgAxADQAOgAwADcAWgA7AEQAbwB3AG4AbABlAHYAZQBsAEcAZQBuAHUAaQBuAGUAUwB0AGEAdABlAD0AMQA7AAAA"
@@ -1922,7 +1922,7 @@ goto :k_final
 
 call :dk_color %Red% "Activation 失败"
 if not defined error call :dk_color %Magenta% "进入故障排除选项并运行修复许可证选项。"
-call :dk_color2 %Magenta% "更多帮助：" %_Yellow% " http://10086678.xyz/troubleshoot"
+call :dk_color2 %Magenta% "更多帮助：" %_Yellow% " http://www.10086678.xyz/troubleshoot"
 
 ::========================================================================================================================================
 
@@ -5155,7 +5155,7 @@ call :Clear-KMS-Cache
 
 if not [%Act_OK%]==[1] (
 echo.
-echo 有任何问题, 请访问： http://10086678.xyz/troubleshoot
+echo 有任何问题, 请访问： http://www.10086678.xyz/troubleshoot
 )
 
 if defined _unattended exit /b
@@ -7094,12 +7094,12 @@ choice /C:1234560 /N
 set _erl=%errorlevel%
 
 if %_erl%==7 exit /b
-if %_erl%==6 start http://10086678.xyz/fix-wpa-registry.html &goto at_menu
+if %_erl%==6 start http://www.10086678.xyz/fix-wpa-registry.html &goto at_menu
 if %_erl%==5 goto:retokens
 if %_erl%==4 goto:fixwmi
 if %_erl%==3 goto:sfcscan
 if %_erl%==2 goto:dism_rest
-if %_erl%==1 start http://10086678.xyz/troubleshoot.html &goto at_menu
+if %_erl%==1 start http://www.10086678.xyz/troubleshoot.html &goto at_menu
 goto :at_menu
 
 ::========================================================================================================================================
@@ -8128,7 +8128,7 @@ if not defined key (
 echo [%winos% ^| %winbuild% ^| SKU:%osSKU%]
 echo 无法在HWID支持的产品列表中找到此产品。
 echo 请确保您正在使用更新版本的脚本。
-echo http://10086678.xyz
+echo http://www.10086678.xyz
 goto ins_done
 )
 
@@ -8181,7 +8181,7 @@ echo 正在安装 [%key%]
 echo:
 call :dk_color %Red% "[Unsuccessful] %error_code%"
 if defined actidnotfound call :dk_color %Red% "未找到此密钥的激活ID。"
-echo 更多帮助： http://10086678.xyz/troubleshoot
+echo 更多帮助： http://www.10086678.xyz/troubleshoot
 )
 %line%
 
@@ -8291,7 +8291,7 @@ if not defined applist (
 %eline%
 echo 找不到激活 ID。 中止...
 echo:
-echo 更多帮助：. http://10086678.xyz/troubleshoot
+echo 更多帮助：. http://www.10086678.xyz/troubleshoot
 goto ced_done
 )
 
@@ -8307,7 +8307,7 @@ cmd /c exit /b !errorlevel!
 echo DISM 命令执行失败 [错误代码 - 0x!=ExitCode!]
 echo OS 版本未能正确检测到。 中止...
 echo:
-echo 更多帮助：. http://10086678.xyz/troubleshoot
+echo 更多帮助：. http://www.10086678.xyz/troubleshoot
 goto ced_done
 )
 
@@ -8508,7 +8508,7 @@ if not defined key (
 echo [%targetedition% ^| %winbuild%]
 echo 无法从pkeyhelper.dll中获取产品密钥
 echo 请确保您正在使用更新版本的脚本。
-echo http://10086678.xyz
+echo http://www.10086678.xyz
 goto ced_done
 )
 
@@ -8648,7 +8648,7 @@ if not defined key (
 echo [%targetedition% ^| %winbuild%]
 echo 无法从pkeyhelper.dll获取产品密钥
 echo 请确保您正在使用更新版本的脚本。
-echo http://10086678.xyz
+echo http://www.10086678.xyz
 goto ced_done
 )
 

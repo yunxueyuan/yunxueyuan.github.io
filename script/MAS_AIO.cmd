@@ -1461,8 +1461,8 @@ set "_Yellow="Black" "Yellow""
 )
 
 set _k38=
-set "nceline=echo: &echo ==== ERROR ==== &echo:"
-set "eline=echo: &call :dk_color %Red% "==== ERROR ====" &echo:"
+set "nceline=echo: &echo ==== 错误 ==== &echo:"
+set "eline=echo: &call :dk_color %Red% "==== 错误 ====" &echo:"
 if %~z0 GEQ 200000 (set "_exitmsg=返回") else (set "_exitmsg=退出")
 set "specific_kms=SOFTWARE\Microsoft\Windows NT\CurrentVersion\SoftwareProtectionPlatform\55c92734-d682-4d71-983e-d6ec3f16059f"
 
@@ -2839,10 +2839,10 @@ if not %xOS%==x86 dir /b "%ProgramW6432%\WindowsApps\Microsoft.Office.Desktop*" 
 rem nothing installed
 if %loc_off21% EQU 0 if %loc_off19% EQU 0 if %loc_off16% EQU 0 if %loc_off15% EQU 0 (
 if %winbuild% GEQ 9200 (
-  if %OffUWP% EQU 0 (echo.&echo No Installed Office 2013-2021 Product Detected...) else (echo.&echo %_mOuwp%)
+  if %OffUWP% EQU 0 (echo.&echo 没有检测到已安装的 Office 2013-2021 产品...) else (echo.&echo %_mOuwp%)
   exit /b
   )
-if %winbuild% LSS 9200 (if %loc_off14% EQU 0 (echo.&echo No Installed Office %aword% Product Detected...&exit /b))
+if %winbuild% LSS 9200 (if %loc_off14% EQU 0 (echo.&echo 没有检测到已安装的 Office  %aword% 产品...&exit /b))
 )
 if %vNextOverride% EQU 1 if %AutoR2V% EQU 1 (
 set sub_o365=0
@@ -3129,8 +3129,8 @@ cscript //nologo "!_temp!\slmgr.vbs" /xpr %_Nul2% | findstr /i "permanently" %_N
 )
 set "_qr=%_zz7% %spp% %_zz2% %_zz5%ApplicationID='%_wApp%' and LicenseStatus='1' %adoff% %_zz6% %_zz3% Name %_zz8%"
 if %WinPerm% EQU 1 (
-for /f "tokens=2 delims==" %%x in ('%_qr%') do echo Checking: %%x
-echo Product is Permanently Activated.
+for /f "tokens=2 delims==" %%x in ('%_qr%') do echo 检查中: %%x
+echo 产品已永久激活。
 exit /b
 )
 call :insKey
@@ -3184,8 +3184,8 @@ set aC2R19=0
 set aC2R16=0
 set aC2R15=0
 if %winbuild% LSS 9200 (set "aword=2010-2021") else (set "aword=2010")
-if %OsppHook% EQU 0 (echo.&echo 未检测到已安装的Office %aword%产品...&exit /b)
-if %winbuild% GEQ 9200 if %loc_off14% EQU 0 (echo.&echo 未检测到已安装的Office %aword%产品...&exit /b)
+if %OsppHook% EQU 0 (echo.&echo 未检测到已安装的Office %aword% 产品...&exit /b)
+if %winbuild% GEQ 9200 if %loc_off14% EQU 0 (echo.&echo 未检测到已安装的Office %aword% 产品...&exit /b)
 set err_offsvc=0
 net start osppsvc /y %_Nul3% || (
 sc start osppsvc %_Nul3%

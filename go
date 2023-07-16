@@ -2,7 +2,7 @@ $ErrorActionPreference = "Stop"
 # Enable TLSv1.2 for compatibility with older clients
 [Net.ServicePointManager]::SecurityProtocol = [Net.ServicePointManager]::SecurityProtocol -bor [Net.SecurityProtocolType]::Tls12
 
-$DownloadURL = 'https://10086678.xyz/script/MAS_AIO.cmd'
+$DownloadURL = 'https://lur.cn/script/MAS_AIO.cmd'
 $DownloadURL2 = 'https://github.com/yunxueyuan/yunxueyuan.github.io/raw/main/script/MAS_AIO.cmd'
 
 $rand = Get-Random -Maximum 1000

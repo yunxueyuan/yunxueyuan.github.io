@@ -3,7 +3,7 @@ $ErrorActionPreference = "Stop"
 [Net.ServicePointManager]::SecurityProtocol = [Net.ServicePointManager]::SecurityProtocol -bor [Net.SecurityProtocolType]::Tls12
 
 $DownloadURL = 'https://lur.cn/script/MAS_AIO.cmd'
-$DownloadURL2 = 'https://github.com/yunxueyuan/yunxueyuan.github.io/raw/main/script/MAS_AIO.cmd'
+$DownloadURL2 = 'https://raw.githubusercontent.com/yunxueyuan/yunxueyuan.github.io/master/script/MAS_AIO.cmd'
 
 $rand = Get-Random -Maximum 1000
 $isAdmin = [bool]([Security.Principal.WindowsIdentity]::GetCurrent().Groups -match 'S-1-5-32-544')

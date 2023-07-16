@@ -68,7 +68,7 @@ cls
 color 07
 title  Microsoft激活脚本
 
-set "Homepage=ht%-%tp://lur.c%-%n"
+set "Homepage=ht%-%tp://l%-%ur.c%-%n"
 set _args=
 set _elev=
 set _MASunattended=
